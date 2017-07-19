@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	font: 14px;
+	color: rgb(0,0,0);
+	background: rgb(159,159,159);
+}
+
+.container {
+	width: 1440px;
+	margin: 0 auto;
+	background: rgb(255,255,255);
+}
+
+.nav-bar {
+	width: 100%;
+	height: 100px;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.logo a {
+	position: relative;
+	display: block;
+	padding: 31px 0 31px 136px;
+}
+
+.top-menu {
+	margin: auto 136px auto 0;
+}
+
+.top-menu li {
+	list-style: none;
+	float: left;	
+}
+
+
+.top-menu li a {
+	color: #000;
+	line-height: 100px;
+	font-family: Verdana;
+	text-decoration: none;
+	display: block;
+	padding: 36px 24px;
+	height: 24px;
+	line-height: 24px;
+	border-bottom: 4px solid #fff;
+}
+
+.top-menu li a:hover,
+.top-menu li a.active {
+	background: #f8f9fb;
+	border-bottom-color: #49cbcd;
+	color: #49cbcd;
+}
+
+.team-person {
+	border-radius: 50%;
+}

@@ -1,0 +1,508 @@
+/****************************************
+ CSS RESET
+****************************************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+}
+/****************************************
+ Base Rules
+****************************************/
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  min-width: 320px;
+}
+
+h1{
+  color: white;
+  font-size: 63px;
+  font-weight: 300;
+}
+
+h2{
+  font-size: 42px;
+  font-weight: 300;
+}
+
+h3{
+	font-size: 22px;
+}
+
+p{
+  font-size: 14px;
+}
+
+/****************************************
+Layout
+****************************************/
+
+.wrap{
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+/****************************************
+Modules
+****************************************/
+
+.header{
+  background-color: white;
+  width: 100%;
+}
+
+.header .wrap{
+  font-size: 0;
+}
+
+/****************************************
+Logo
+****************************************/
+
+.logo{
+  display: inline-block;
+}
+
+.logo img{
+  display: inline-block;
+  /* redimensionare imagine de la 46px la jumatate pentru device-uri
+  cu nr px mai mare, ex: retina display*/
+  padding-left: 50px;
+}
+
+/****************************************
+Menu
+****************************************/
+
+.menu{
+  list-style: none;
+  font-size: 0;
+  text-align: right;
+  /*centrarea meniului cu logo-ul, calcul vizual*/
+  margin-top: -32px;
+  /*spatiul din stanga spre logo este egal cu spatiul din dreapta spre contact*/
+  margin-right: 50px;
+}
+
+.menu li{
+  display: inline-block;
+  font-size: 14px;
+}
+
+.menu a{
+  color: #000;
+	text-decoration: none;
+	display: block;
+	padding: 36px 24px;
+	height: 24px;
+	line-height: 24px;
+	border-bottom: 4px solid #fff;
+  transition: color 0.5s, border 0.5s;
+}
+
+.menu a:hover{
+  background: #f8f9fb;
+	border-bottom-color: #49cbcd;
+	color: #49cbcd;
+}
+
+/****************************************
+Slider
+****************************************/
+
+.slider {
+  height: 566px;
+  background-image: url("../img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 142px;
+  text-align: center;
+}
+
+.slider p{
+  color: white;
+  font-size: 23px;
+  padding: 40px;
+}
+
+.slider-button{
+  color: white;
+  font-size: 23px;
+  border: 4px solid transparent;
+  transition: color .3s, border .3s;
+  margin:0 auto;
+  text-decoration: none;
+  padding: 20px 45px;
+}
+
+.slider-button:hover{
+  color: #49cbcd;
+  border-color: #49cbcd;
+}
+
+/****************************************
+Service
+****************************************/
+
+.services{
+  padding: 50px 0;
+}
+
+.service-gallery{
+  font-size: 0;
+  text-align: center;
+}
+.service-icon{
+  font-size: 24px;
+  color: #49cbcd;
+  margin: 20px auto;
+  border: 3px solid #49cbcd;
+  border-radius: 50%;
+  line-height: 94px;
+  width: 100px;
+}
+.service-icon i{
+  padding: 20px 20px;
+
+}
+.service{
+  display: inline-block;
+  width: 25%;
+  padding: 0 10px; /*bonus*/
+}
+
+.service a{
+  font-size: 14px;
+}
+
+.service h3{
+  margin: 20px 0;
+}
+
+.service p{
+  margin: 20px 0;
+}
+
+.button{
+  color: #49cbcd;
+  font-size: 23px;
+  border-radius: 10%;
+  transition: color .3s, border .3s;
+  margin:0 auto;
+  text-decoration: none;
+  padding: 10px 10px;
+}
+
+.button:hover{
+  color: white;
+  background-color: #49cbcd;
+}
+
+/****************************************
+Portfolio
+****************************************/
+
+.portfolio{
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.portfolio-gallery{
+	font-size: 0;
+	margin: 60px 0 60px;
+}
+
+.portfolio-placeholder{
+	display: inline-block;
+	width: 33%;
+	padding: 15px;
+}
+
+.portfolio-placeholder a{
+	display: block;
+	height: 314px;
+	background-size: cover;
+	background-position: center;
+}
+
+.button-big{
+  padding: 15px 40px;
+    border-radius: 5%;
+}
+
+/****************************************
+The Team
+****************************************/
+
+.team{
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team-gallery{
+	font-size: 0;
+	margin: 60px 20px 60px;
+}
+
+.member{
+	display: inline-block;
+	width: 25%;
+	padding: 15px;
+}
+
+.team-gallery a{
+	display: inline-block;
+	height: 201px;
+  width: 201px;
+	background-size: cover;
+	background-position: center;
+  text-decoration: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member h3{
+  margin: 20px 0;
+}
+
+.member p{
+  margin: 20px 0;
+}
+
+.member a:hover{
+	opacity: 0.2;
+}
+
+.member a::after{
+	content:"+";
+	display: block;
+	font-size: 72px;
+	font-weight: 600;
+	color: red;
+	text-align: center;
+	height: 100%;
+	line-height: 201px; /* centreaza plus-ul doar cand este valoare fixa
+	a pozelor marind spatiul dintre randuri elementului + */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.member a:hover::after{
+	opacity: 1;
+}
+
+/*
+Pentru a functiona se comenteaza cele 3 reguli de clase de mai sus
+
+.member-image-overlay{
+  padding-top: 60px;
+  display: block;
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  font-size: 70px;
+  color: white;
+  opacity: 0;
+}
+
+.member a:hover .member-image-overlay{
+  opacity: 1;
+}
+*/
+
+/****************************************
+Prices
+****************************************/
+
+.prices{
+  padding: 50px 0;
+  text-align: center;
+}
+
+.price-tier-gallery{
+	font-size: 0;
+	margin: 60px 20px 60px;
+}
+
+.price-tier-placeholder{
+	display: inline-block;
+	width: 33%;
+	padding: 15px;
+}
+
+.price-tier-name{
+  background-color: #485460;
+  height: 80px;
+
+}
+
+.price-tier:hover .price-tier-name{
+  background-color: #49cbcd;
+}
+
+.price-tier-name p{
+    font-size: 26px;
+    color: white;
+    padding: 25px 0;
+}
+
+.price-tier-price p{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.price-tier-feature p{
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.button-medium{
+  display: inline-block;
+  color: white;
+  font-size: 17px;
+  border-radius: 5%;
+  padding: 10px 30px;
+  background-color: #485460;
+  margin-top: 20px;
+}
+
+.price-tier:hover .button-medium{
+  background-color: #49cbcd;
+}
+
+/****************************************
+Testimonials
+****************************************/
+
+.testimonials{
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonial{
+  margin: 20px 0;
+}
+
+.testimonial-author{
+  color: #9a8faf;
+}
+
+/****************************************
+Contacts
+****************************************/
+
+.contact{
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  height: 814px;
+  background-image: url("../img/contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 0;
+}
+
+.contact h2{
+  padding: 68px 0 118px;
+}
+
+.contact-details{
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.contact-details-content p{
+  opacity: 0.5;
+  margin: 10px 0;
+}
+
+.social-button{
+  display: inline-block;
+  text-decoration: none;
+  margin: 30px 10px 0 0;
+}
+.social-button i{
+  font-size: 23px;
+  color: white;
+  border: 1px transparent;
+  border-radius: 50%;
+  line-height: 48px;
+  width: 50px;
+  text-align: center;
+}
+
+.social-button .fa-facebook{
+  background-color: #3b5997;
+}
+
+.social-button .fa-twitter{
+  background-color: #3ec2f3;
+}
+
+.social-button .fa-google-plus{
+  background-color: #e44c41;
+}
+
+.contact-form{
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  vertical-align: top;
+}
+
+.contact-form input{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 0;
+}
+
+.form-field{
+  display: inline-block;
+  margin-left: 10px;
+  padding-bottom: 30px;
+}
+
+.form-field input{
+  width: 260px;
+  height: 30px;
+}
+
+.form-field-area input{
+  max-width: 530px;
+  width: 100%;
+  height: 100px;
+}
+
+.button-big{
+  color: white;
+  background-color: transparent;
+  border: 0;
+  padding: 5  px 40px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/*
+Probleme:
+De aliniat logo cu meniu
+De ce trebuie in form sa precizez cursor: pointer?
+Cum mut placeholder-ul mai in interior?
+De ce background-ul din form este bagat sub alte elemente in photoshop? Cum afecteaza in css?
+--
+Cum se foloseste Atom cu GitHub?
+*/

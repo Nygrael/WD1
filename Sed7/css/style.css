@@ -1,0 +1,558 @@
+/****************************************
+ CSS RESET
+****************************************/
+
+*{
+  margin: 0;
+  padding: 0;
+  /* se ignora cei 30px din padding stanga+dreapta care se adauga pe langa cei
+  1170px care sunt trecuti ca 100% -> valorile din clasa .wrap */
+  box-sizing: border-box;
+}
+
+/****************************************
+ Base Rules
+****************************************/
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  min-width: 320px;
+}
+
+h2{
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h2::after{
+	/*fara aceste 2 elemente de content si display nu se afiseaza nimic*/
+	content: "";
+	display: block;
+	background-color: white;
+	height: 2px;
+	width: 45px;
+}
+h3{
+	font-size: 24px;
+	font-weight: 600;
+}
+
+p{
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+/****************************************
+Layout
+****************************************/
+
+.wrap{
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/****************************************
+Modules
+****************************************/
+
+.header{
+  background-color: rgba(53,63,70,0.85);
+  padding: 63px 0;
+  position: absolute;
+  width: 100%;
+}
+
+/*pentru a elimina spatiul dintre imagine si marginea de jos*/
+.header .wrap{
+  font-size: 0;
+}
+
+/* Logo */
+.logo{
+  display: inline-block;
+}
+
+.logo img{
+  display: inline-block;
+  /* redimensionare imagine de la 46px la jumatate pentru device-uri
+  cu nr px mai mare, ex: retina display*/
+  height: 23px;
+}
+
+/****************************************
+Menu-section
+****************************************/
+
+.menu{
+  list-style: none;
+  font-size: 0;
+  text-align: right;
+  /*centrarea meniului cu logo-ul, calcul vizual*/
+  margin-top: -32px;
+  /*spatiul din stanga spre logo este egal cu spatiul din dreapta spre contact*/
+  margin-right: -25px;
+}
+
+.menu li{
+  display: inline-block;
+  font-size: 14px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  /* pt ca un element inline nu accepta padding care sa modifice pozitionarea
+  continutului din jurul lui */
+  display: inline-block;
+  /*
+  padding 25px - sus/dreapta/jos/stanga 25px
+  padding 1px 2px; - sus 1px/dreapta 2px/jos 1px/stanga 2px
+  padding 1px 2px 3px - sus 1px/dreapta 2px/jos 3px/stanga 2px
+  padding 1px 2px 3px 3px
+  0 se scrie fara px
+  */
+  padding: 8px 21px;
+  border: 2px solid transparent;
+  transition: color 0.5s, border 0.5s;
+}
+
+.menu a:hover{
+  color: #4bcaff;
+  border-color:#4bcaff;
+}
+
+/* Break-point*/
+@media(max-width: 850px){
+  .header {
+    text-align: center;
+  }
+  .menu {
+    margin-top: 30px;
+    margin-left: -25px;
+    text-align: center;
+
+  }
+}
+
+/****************************************
+Hero-section
+****************************************/
+
+.hero{
+  height: 800px;
+  background-image: url("../img/slider.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 400px;
+  text-align: center;
+}
+
+.hero p{
+	width: 100%;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button{
+	color: white;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	display: inline-block;
+	transition: color .3s, border .3s;
+	margin:0 auto;
+	text-decoration: none;
+	padding: 10px;
+}
+.hero-button{
+	line-height: 41px;
+	width: 75px;
+	padding: 0;
+}
+
+.button:hover{
+  color: black;
+  border-color: black;
+}
+
+.hero-button:hover{
+  color: #4bcaff;
+  border-color: #4bcaff;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 42px;
+  font-weight: 300;
+  text-transform: uppercase;
+  background-color: rgba(53,63,70,0.85);
+  /* centrarea elementelor de tip block
+  margin-left: auto;
+  margin-right: auto;
+  ..*/
+  display: inline;
+  line-height: 75px;
+}
+
+/* Services-section Commented */
+
+.commment_services{
+  background-color: #4bcaff;
+  color: white;
+  padding: 80px 0;
+}
+
+.commment_service-gallery{
+  /* eliminam spatiile dintre fiecare service */
+  font-size: 0;
+}
+
+.commment_service{
+  display: inline-block;
+  width: 25%;
+  padding: 0 10px; /*bonus*/
+}
+
+/****************************************
+Services-section
+****************************************/
+
+.services{
+	background-color: #4bcaff;
+	padding: 80px 0;
+	color: white;
+}
+
+.services img{
+	height: 48px;
+}
+
+.services h3{
+	margin: 20px 0;
+}
+
+.service-gallery{
+	font-size: 0;
+	margin: 10px -15px 0 -15px;
+}
+
+.service{
+	display: inline-block;
+	width: 25%;
+	/* outline: 1px solid red;
+	pentru a vizualiza zona fara a adauga margini/padding */
+	padding: 0 15px;
+	vertical-align: top;
+}
+
+/****************************************
+Portfolio-section
+****************************************/
+
+.portfolios{
+	padding: 80px 0;
+}
+
+.portfolios h2::after{
+	content: "";
+	display: block;
+	background-color: black;
+	height: 2px;
+	width: 45px;
+}
+
+.portfolio-gallery{
+	font-size: 0;
+	margin: 50px -15px 0;
+}
+
+.portfolio{
+	display: inline-block;
+	width: 25%;
+	padding: 15px;
+}
+
+.portfolio a{
+	display: block;
+	height: 270px;
+	background-size: cover;
+	background-position: center;
+	text-decoration: none; /* elimina underline-ul plus-ului din after */
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.portfolio a::after{
+	content:"+";
+	display: block;
+	font-size: 72px;
+	font-weight: 300;
+	color: white;
+	background-color: rgba(0,0,0,0.6);
+	text-align: center;
+	height: 100%;
+	line-height: 270px; /* centreaza plus-ul doar cand este valoare fixa
+	a pozelor marind spatiul dintre randuri elementului + */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.portfolio a:hover::after{
+	opacity: 1;
+}
+
+.menu-portofolio a{
+	color: black;
+}
+
+.menu-portofolio a:hover{
+  color: red;
+  border-color:#4bcaff;
+}
+
+.menu-portofolio{
+	margin-top: -38px;
+}
+
+/****************************************
+Default-section
+****************************************/
+
+.def-section{
+	background-color: grey;
+	padding: 80px 0;
+}
+
+.row{
+	display: block;
+	font-size: 0;
+}
+
+.col-50{
+	font-size: 12px;
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.col-50 h2{
+	color: white;
+}
+
+.col-50 p{
+	color: white;
+	margin: 20px 0;
+	width: 100%;
+	max-width: 450px;
+}
+
+.video {
+	display: block;
+	height: 270px;
+	background-size: cover;
+	background-position: center;
+}
+
+/****************************************
+Twitter-section
+****************************************/
+
+.tw-section{
+	background-color: #4bcaff;
+	padding: 80px 0;
+	color: white;
+}
+
+.tw-section p{
+	margin: 30px 0 0;
+	line-height: 60px;
+	font-size: 28px;
+	font-weight: 300;
+}
+
+.tw-section h2 img{
+	float: right;
+	height: 24px;
+}
+
+/****************************************
+Who-section
+****************************************/
+
+.who-section{
+  height: 504px;
+  background-image: url("../img/who.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  font-size: 0;
+}
+
+.who-section h2{
+  color: white;
+}
+
+.who-section .col-50 a{
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  line-height: 48px;
+  width: 50px;
+  text-decoration: none;
+}
+
+/****************************************
+Testimonials-section
+****************************************/
+
+.testimonials-section{
+	padding: 80px 0;
+}
+
+.testimonials-section h2::after{
+	background-color: black;
+}
+.testimonials-section p{
+	margin: 30px 0 0;
+	line-height: 50px;
+	font-size: 28px;
+	font-weight: 300;
+}
+
+.testimonials-section h2 img{
+	float: right;
+	height: 24px;
+}
+
+.testimonials-section .p1{
+  color: #4bcaff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/****************************************
+Contact-section
+****************************************/
+
+.contact{
+  height: 814px;
+  background-image: url("../img/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  font-size: 0;
+}
+
+.contact h2::after{
+	background-color: black;
+}
+.contact form{
+  padding: 36px 0;
+  background-color: transparent;
+}
+
+.contact p{
+  margin: 0;
+}
+.contact input{
+  width: 90%;
+  height: 60px;
+  background: transparent;
+}
+
+.contact textarea{
+  width: 100%;
+  height: 220px;
+  background: transparent;
+}
+
+.contact label{
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.contact .contact-button{
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  margin-top: 15px;
+  padding: 10px 30px;
+  background-color: #485460;
+  border: 0;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.contact-button:hover{
+  background-color: #4bcaff;
+}
+
+/****************************************
+Modal-section
+****************************************/
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0,0,0,.8);
+  visibility: hidden;
+}
+
+.modal{
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  padding: 30px;
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close{
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  line-height: 30px;
+  width: 30px;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  color: #333;
+  transition: background .3s, color .3s;
+}
+
+.modal-close:hover{
+  background-color: coral;
+  color: white;
+}
+
+/*
+Probleme:
+Form:
+de ce border-ul este diferit?
+de ce cand dau refresh butonul se animeaza?

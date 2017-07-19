@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> Form Select</h1>
+    <legend>zzzzz</legend>
+    <form action="self" method="post">
+      <label for"">Judete:</label>
+      <select name="judete">
+        <option value="" selected disabled hidden>Alege</option>
+        <optgroup label="Sud">
+          <option value="b">Bucuresti</option>
+          <option value="if">Ilfov</option>
+        </optgroup>
+        <optgroup label="Nord">
+          <option value="ph">Prahova</option>
+          <option value="bz">Buzau</option>
+        </optgroup>
+      </select>
+      <br>
+      <select name="judete-m[]" multiple>
+        <option value="" selected disabled hidden>Alege</option>
+        <optgroup label="Sud">
+          <option value="b">Bucuresti</option>
+          <option value="if">Ilfov</option>
+        </optgroup>
+        <optgroup label="Nord">
+          <option value="ph">Prahova</option>
+          <option value="bz">Buzau</option>
+        </optgroup>
+      </select>
+      <br>
+
+      <button type="submit"><img src="img/bla.jpg" alt="11" height="10">Trimite</button>
+    </form>
+  </body>
+</html>

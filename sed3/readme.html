@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form-uri</title>
+  </head>
+  <body>
+    <form action ="self" method="post" enctype="multipart/form-data">
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Completati Email-ul">
+      <br>
+      <label>Parola:</label>
+      <input type="password" name="pass">
+      <br>
+      <label for ="">Numar:</label>
+      <input type="number" name="nr">
+      <br>
+      <label for ="">Data:</label>
+      <input type="date" name="data">
+      <br>
+      <label for ="">Mesaj:</label>
+      <textarea name="name" rows="5" cols="50" placeholder="xxx"></textarea>
+      <br>
+      <hr>
+      <input type="radio" name="gen" value="m" checked id="gen-m">
+      <label for ="gen-m">----M----</label>
+      <br>
+      <input type="radio" name="gen" value="f" id="gen-f">
+      <label for ="gen-f">----F----</label>
+      <br>
+      <hr>
+      <input type="checkbox" name="hobby[]" value="teatru" id="h-t">
+      <label for="h-t">Teatru</label>
+      <br>
+      <input type="checkbox" name="hobby[]" value="sport" id="h-s">
+      <label for="h-s">Sport</label>
+      <br>
+      <input type="checkbox" name="hobby[]" value="programare" id="h-p">
+      <label for="h-p">Programare</label>
+      <br>
+      <input type="checkbox" name="hobby[]" value="muzica" id="h-z">
+      <label for="h-z">Muzica</label>
+      <br>
+      <hr>
+      <label for="">CV:</label>
+      <input type="file" name="cv" multiple>
+      <br>
+      <br>
+      <input type="submit" name="send" value="Trimite">
+      <button type="submit" name="send2" value="Trimite2">Trimite2</button>
+    </form>
+  </body>
+</html>
