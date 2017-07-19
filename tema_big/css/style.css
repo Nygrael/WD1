@@ -86,7 +86,7 @@ Menu
   font-size: 0;
   text-align: right;
   /*centrarea meniului cu logo-ul, calcul vizual*/
-  margin-top: -32px;
+  margin-top: -36px;
   /*spatiul din stanga spre logo este egal cu spatiul din dreapta spre contact*/
   margin-right: 50px;
 }
@@ -100,7 +100,7 @@ Menu
   color: #000;
 	text-decoration: none;
 	display: block;
-	padding: 36px 24px;
+	padding: 20px 24px;
 	height: 24px;
 	line-height: 24px;
 	border-bottom: 4px solid #fff;
@@ -479,12 +479,16 @@ Contacts
 .form-field input{
   width: 260px;
   height: 30px;
+  padding-left: 15px;
+  font-family: Arial, sans-serif;
 }
 
-.form-field-area input{
+.form-field-area textarea{
   max-width: 530px;
   width: 100%;
   height: 100px;
+  padding: 10px 15px;
+  font-family: Arial, sans-serif;
 }
 
 .button-big{
@@ -501,7 +505,7 @@ Contacts
 Probleme:
 De aliniat logo cu meniu
 De ce trebuie in form sa precizez cursor: pointer?
-Cum mut placeholder-ul mai in interior?
+
 De ce background-ul din form este bagat sub alte elemente in photoshop? Cum afecteaza in css?
 --
 Cum se foloseste Atom cu GitHub?

@@ -469,6 +469,7 @@ Contact-section
   width: 90%;
   height: 60px;
   background: transparent;
+  border-style: solid;
 }
 
 .contact textarea{
@@ -496,7 +497,7 @@ Contact-section
   padding: 10px 30px;
   background-color: #485460;
   border: 0;
-  transition-duration: 0.4s;
+  transition: color 0.4s;
   cursor: pointer;
 }
 
@@ -507,7 +508,7 @@ Contact-section
 /****************************************
 Modal-section
 ****************************************/
-
+/*
 .overlay{
   position: fixed;
   top: 0;
@@ -550,9 +551,71 @@ Modal-section
   background-color: coral;
   color: white;
 }
+*/
 
-/*
-Probleme:
-Form:
-de ce border-ul este diferit?
-de ce cand dau refresh butonul se animeaza?
+.overlay{
+  background-color: rgba(0,0,0,.9);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  /*pentru a nu fi vizibil*/
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .6s, opacity .6s;
+}
+
+.overlay.is-showing{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal{
+  background-color: white;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  position: absolute; /*pentru a putea fi mutat */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*pentru a fi mutat in centru*/
+}
+
+.modal-close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-decoration: none;
+  background-color: white;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: red;
+  background-color: blue;
+  transition: color 0.5s, background 0.5s, border-radius 0.5s;
+  animation: rotation 1s infinite linear;
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  0%{
+    transform: rotateZ(0) scale(1);
+  }
+  50%{
+    transform: rotateZ(180deg) scale(1.5);
+  }
+  100%{
+    transform: rotateZ(360deg) scale(1);
+
+  }
+}
+
+.modal-close:hover{
+  color: blue;
+  background-color: red;
+  animation-play-state: running;
+  border-radius: 50% 0 50% 50%;
+}
