@@ -5,8 +5,6 @@
 *{
   margin: 0;
   padding: 0;
-  /* se ignora cei 30px din padding stanga+dreapta care se adauga pe langa cei
-  1170px care sunt trecuti ca 100% -> valorile din clasa .wrap */
   box-sizing: border-box;
 }
 
@@ -15,7 +13,7 @@
 ****************************************/
 
 body{
-  font-family: font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-width: 600px;
 }
 
@@ -25,9 +23,66 @@ Layout
 
 .wrap{
   width: 100%;
-  max-width: 1170px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+/****************************************
+Header
+****************************************/
+
+.header{
+  background-color: rgba(51,59,69,0.97);
+  padding: 30px 0;
+  width: 100%;
+}
+
+.header .wrap{
+  font-size: 0;
+}
+
+.logo{
+  display: inline-block;
+  color: #ff6868;
+  font-size: 22px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.menu-header{
+  list-style: none;
+  font-size: 0;
+  text-align: right;
+  margin-top: -33px;
+}
+
+.menu li{
+  display: inline-block;
+  font-size: 14px;
+}
+
+.menu a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 8px;
+  margin: 0 2px;
+}
+
+/****************************************
+Main
+****************************************/
+
+.main{
+  height: 628px;
+  background-image: url("../img/main_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
