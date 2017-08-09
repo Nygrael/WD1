@@ -1,0 +1,33 @@
+/****************************************
+ CSS RESET
+****************************************/
+
+*{
+  margin: 0;
+  padding: 0;
+  /* se ignora cei 30px din padding stanga+dreapta care se adauga pe langa cei
+  1170px care sunt trecuti ca 100% -> valorile din clasa .wrap */
+  box-sizing: border-box;
+}
+
+/****************************************
+ Base Rules
+****************************************/
+
+body{
+  font-family: font-family: 'Open Sans', sans-serif;
+  min-width: 600px;
+}
+
+/****************************************
+Layout
+****************************************/
+
+.wrap{
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
