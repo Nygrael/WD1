@@ -22,6 +22,21 @@ h1{
   font-weight: 900;
 }
 
+h2{
+  font-size: 38px;
+  font-weight: 300;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h4{
+  font-size: 14px;
+  font-weight: bold;
+}
+
 p{
   font-family: 'Gentium Book Basic', serif;
   font-size: 14px;
@@ -29,8 +44,14 @@ p{
   color: #99a0a8;
 }
 
-.gradient{
+.gradient-dark{
   background: -webkit-linear-gradient(#ff6868, #a1575c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-light{
+  background: -webkit-linear-gradient(#ff6868, #ffafaf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -80,46 +101,31 @@ input{
   border-radius: 8px;
   padding: 17px 28px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .three-buttons{
   display: inline-block;
   text-decoration: none;
-  margin: 30px 10px 0 0;
+  width: 45px;
+	height: 45px;
+	margin-right: 5px;
+	border: 3px solid transparent;
+	border-image: linear-gradient(145deg, #ff6868 0%,#ff6868 60%, #a1575c 61%, #a1575c 100%);
+	border-image-slice: 1;
+  text-align: center;
 }
 
 .three-buttons i{
   font-size: 12px;
-
   background: -webkit-linear-gradient(#ff6868, #a1575c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
+  padding: 13px 0;
 }
 
-.test{
-  position: relative;
-background: linear-gradient(rgb(252,238,33), rgb(255,255,255));
--webkit-border-radius:50px;
--moz-border-radius:50px;
-border-radius:50%;
-width:100px;
-height:100px;
-}
-.test:after {
-  position: absolute;
-  display: block;
-  top: 5px;
-  left: 5px;
-  width: 90px;
-  height: 90px;
-  content: "";
-  background-color: transparent;
+.test {
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 /****************************************
@@ -201,3 +207,185 @@ Main
 .main p{
   padding: 32px 0;
 }
+
+.main-buttons{
+  padding: 30px 0;
+}
+
+/****************************************
+Service
+****************************************/
+
+.service{
+  padding: 90px 0;
+  text-align: center;
+}
+
+.shapes{
+  height: 120px;
+  background-image: url("../img/service/shape.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 68% 68%;
+}
+
+.service-gallery{
+  font-size: 0;
+}
+
+.service-tier{
+  display: inline-block;
+  width: 33.3%;
+}
+
+.service-tier h3{
+  padding: 24px 0;
+}
+
+.service-tier p{
+  padding: 0 10px;
+}
+.service-icon{
+  font-size: 38px;
+  font-weight: 300;
+}
+
+/****************************************
+Team
+****************************************/
+
+.team{
+  background-color: #3a424c;
+}
+
+.team-gallery{
+  font-size: 0;
+}
+
+.team-placeholder-center{
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.team-placeholder-left{
+  display: inline-block;
+  height: 296px;
+  width: 191px;
+  margin: 62px 0 62px -220px;
+  background-image: url("../img/team/1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-image{
+  display: inline-block;
+  height: 296px;
+  width: 299px;
+  margin: 62px 0 62px 30px;
+  background-image: url("../img/team/2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-desc{
+  position: absolute;
+  display: inline-block;
+  width: 29%;
+  margin: 0 20px;
+  margin-top: 52px;
+}
+
+.team-desc h2{
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.team-desc h3{
+  font-weight: 300;
+  color: white;
+}
+
+.team-desc p{
+  color: white;
+  padding: 24px 0;
+}
+
+.team-desc h4{
+  color: white;
+  padding: 10px 0;
+}
+
+.skills-container {
+    width: 100%;
+    background-color: #4a515b;
+}
+
+.skills {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 20px;
+  color: #3a424c;
+}
+
+.number{
+  width: 84%;
+  background: -webkit-linear-gradient(left, #ff6868, #a1575c);
+  background: -o-linear-gradient(left, #ff6868, #a1575c);
+  background: -moz-linear-gradient(left, #ff6868, #a1575c);
+  background: linear-gradient(to left, #ff6868, #a1575c);
+}
+
+.team-placeholder-right{
+  display: inline-block;
+  height: 296px;
+  width: 191px;
+  margin: 62px -220px 62px 0;
+  background-image: url("../img/team/1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/****************************************
+Development
+****************************************/
+
+.development{
+  margin: 87px 0;
+  display: inline-block;
+  height: 310px;
+  width: 100%;
+  max-width: 1920px;
+  background-image: url("../img/development/iphone6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.development-area{
+  width: 100%;
+  max-width: 500px;
+}
+.development-area h2{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.development-area p{
+  padding: 20px 0;
+}
+
+/****************************************
+Portfolio
+****************************************/
+
+
+
+
+
+
+/*Probleme:
+1. De ce la .team-desc trebuie sa folosesc position-absolute ?
+*/
