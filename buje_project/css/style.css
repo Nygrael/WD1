@@ -381,11 +381,133 @@ Development
 Portfolio
 ****************************************/
 
+.portfolio{
+  padding-top: 90px;
+  text-align: center;
+  font-size: 0;
+}
 
+.menu-portfolio{
+  padding: 40px 0;
+}
 
+.menu-portfolio a{
+  color: #99a0a8;
+  font-size: 16px;
+  text-transform: none;
+  border-radius: 10%;
+  border: 2px solid white;
+  padding: 10px;
+  transition: color 0.5s, border 0.5s;
+}
 
+.menu-portfolio a:hover{
+  border: 2px solid red;
+  color: red;
+}
 
+.portfolio-gallery{
+  margin: 0 -182px;
+}
 
+.portfolio-placeholder{
+	display: inline-block;
+	width: 25%;
+}
+
+.portfolio-placeholder a{
+	display: block;
+	height: 326px;
+	background-size: cover;
+	background-position: center;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.portfolio-placeholder a::after{
+	content:"PROJECT TITLE \f055";
+  font-family: FontAwesome;
+	display: block;
+	font-size: 30px;
+	font-weight: 600;
+	background: -webkit-linear-gradient(#ff6868, #a1575c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	background-color: rgba(0,0,0,0.6);
+	text-align: center;
+	height: 100%;
+	line-height: 270px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.portfolio-placeholder a:hover::after{
+	opacity: 1;
+}
+
+.portfolio-buttons-gallery{
+  background-color: #3a424c;
+  font-size: 0;
+}
+.portfolio-buttons{
+	display: inline-block;
+	width: 25%;
+  padding: 47px 20px;
+}
+
+.portfolio-buttons a{
+	display: block;
+	height: 60px;
+	background-size: contain;
+	background-position: center;
+	text-decoration: none;
+  background-repeat: no-repeat;
+  -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.portfolio-buttons a:hover{
+  -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+
+/****************************************
+Blog
+****************************************/
+
+.blog{
+  padding-top: 90px;
+  text-align: center;
+  font-size: 0;
+}
+
+.blog-gallery{
+  padding: 40px 0;
+}
+
+.blog-placeholder{
+	display: inline-block;
+	width: 50%;
+}
+
+.blog-placeholder a{
+	display: inline-block;
+  width: 220px;
+	height: 218px;
+	background-size: cover;
+	background-position: center;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.blog-placeholder .test{
+  display: inline-block;
+  width: 100%;
+  max-width: 212px;
+}
 /*Probleme:
 1. De ce la .team-desc trebuie sa folosesc position-absolute ?
+2. Shape-urile din Service pot fi generate din CSS?
+3. Cand adaug background gradient pe portfolio-placeholder a::after nu se mai aplica background-color: rgba(0,0,0,0.6);
+4. Alta modalitate de a modifica imaginile din portfolio-buttons on hover nu am gasit.
 */
