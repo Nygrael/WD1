@@ -33,6 +33,12 @@ h3{
 }
 
 h4{
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h5{
   font-size: 14px;
   font-weight: bold;
 }
@@ -476,7 +482,7 @@ Blog
 ****************************************/
 
 .blog{
-  padding-top: 90px;
+  padding: 90px 0;
   text-align: center;
   font-size: 0;
 }
@@ -488,6 +494,7 @@ Blog
 .blog-placeholder{
 	display: inline-block;
 	width: 50%;
+  padding-bottom: 20px;
 }
 
 .blog-placeholder a{
@@ -500,14 +507,115 @@ Blog
 	overflow: hidden;
 }
 
-.blog-placeholder .test{
+.blog-placeholder .blog-placeholder-text{
   display: inline-block;
   width: 100%;
-  max-width: 212px;
+  max-width: 200px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#date {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/****************************************
+Subscribe
+****************************************/
+
+.subscribe{
+  height: 318px;
+  background-image: url("../img/subscribe_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+}
+
+.subscribe h2{
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 65px;
+}
+
+.subscribe-placeholder{
+  max-width: 450px;
+  width: 100%;
+}
+
+.subscribe-placeholder p{
+  padding: 22px 0;
+}
+
+/****************************************
+Pricing
+****************************************/
+
+.pricing{
+  padding: 90px 0;
+  text-align: center;
+  font-size: 0;
+}
+
+.price-tier-gallery{
+	font-size: 0;
+}
+
+.price-tier{
+  text-align: left;
+}
+
+.price-tier-placeholder{
+	display: inline-block;
+	width: 33%;
+	padding: 15px;
+}
+
+.price-tier-name{
+  background-color: #3a424c;
+}
+
+.price-tier-name-50{
+  display: inline-block;
+  width: 50%;
+}
+
+.price-tier-name-50 h2{
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.price-tier-name-50 p{
+  display: inline-block;
+}
+
+#number{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+#simbol{
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.price-tier-feature{
+  display: inline-block;
+  font-size: 16px;
+  text-align: left;
+}
+
+.price-tier-feature i{
+  color: #ff6868;
+  padding: 10px 0 10px 10px;
 }
 /*Probleme:
-1. De ce la .team-desc trebuie sa folosesc position-absolute ?
+1. De ce la .team-desc trebuie sa folosesc position-absolute pentru aliniere?
 2. Shape-urile din Service pot fi generate din CSS?
 3. Cand adaug background gradient pe portfolio-placeholder a::after nu se mai aplica background-color: rgba(0,0,0,0.6);
 4. Alta modalitate de a modifica imaginile din portfolio-buttons on hover nu am gasit.
+5. La fel ca problema 1, de ce elementele din blog-placeholder-text nu incep de sus?
 */
