@@ -65,32 +65,33 @@ p{
 input{
   display: inline;
   height: 46px;
-  width: 337px;
+  width: 100%;
+  max-width: 337px;
   border-radius: 3px;
   border: 0;
   background-color: #4a515b;
+  padding: 20px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  padding-left: 25px;
   color: #a2a2a2;
   font-size: 12px;
   font-weight: bold;
 }
+
 ::-moz-placeholder { /* Firefox 19+ */
-  padding-left: 25px;
   color: #a2a2a2;
   font-size: 12px;
   font-weight: bold;
 }
+
 :-ms-input-placeholder { /* IE 10+ */
-  padding-left: 25px;
   color: #a2a2a2;
   font-size: 12px;
   font-weight: bold;
 }
+
 :-moz-placeholder { /* Firefox 18- */
-  padding-left: 25px;
   color: #a2a2a2;
   font-size: 12px;
   font-weight: bold;
@@ -295,11 +296,11 @@ Team
 }
 
 .team-desc{
-  position: absolute;
   display: inline-block;
-  width: 29%;
-  margin: 0 20px;
-  margin-top: 52px;
+  width: 60%;
+  height: 296px;
+  margin: 62px 20px;
+  vertical-align: top;
 }
 
 .team-desc h2{
@@ -509,6 +510,7 @@ Blog
 
 .blog-placeholder .blog-placeholder-text{
   display: inline-block;
+  vertical-align: top;
   width: 100%;
   max-width: 200px;
   text-align: left;
@@ -576,11 +578,14 @@ Pricing
 
 .price-tier-name{
   background-color: #3a424c;
+  padding: 10px 10px;
+  border-radius: 8px 8px 0 0;
 }
 
 .price-tier-name-50{
   display: inline-block;
   width: 50%;
+  vertical-align: middle;
 }
 
 .price-tier-name-50 h2{
@@ -590,11 +595,17 @@ Pricing
 
 .price-tier-name-50 p{
   display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
 }
 
+.price-tier-name-right{
+  text-align: right;
+}
 #number{
   font-size: 32px;
   font-weight: 900;
+  text-align: right;
 }
 
 #simbol{
@@ -605,17 +616,125 @@ Pricing
 .price-tier-feature{
   display: inline-block;
   font-size: 16px;
-  text-align: left;
 }
 
 .price-tier-feature i{
   color: #ff6868;
   padding: 10px 0 10px 10px;
 }
-/*Probleme:
-1. De ce la .team-desc trebuie sa folosesc position-absolute pentru aliniere?
-2. Shape-urile din Service pot fi generate din CSS?
-3. Cand adaug background gradient pe portfolio-placeholder a::after nu se mai aplica background-color: rgba(0,0,0,0.6);
-4. Alta modalitate de a modifica imaginile din portfolio-buttons on hover nu am gasit.
-5. La fel ca problema 1, de ce elementele din blog-placeholder-text nu incep de sus?
+
+.price-tier-buttons{
+  padding-top: 20px;
+}
+
+/****************************************
+Post
+****************************************/
+
+.post{
+  text-align: center;
+  font-size: 0;
+  background-color: #3a424c;
+  padding: 65px 0;
+}
+
+.post p{
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+}
+
+.post-name p{
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+#post_p1{
+  color: white;
+}
+
+#post_p2{
+  color: #99a0a8;
+}
+
+/****************************************
+Contact
+****************************************/
+
+.contact{
+  text-align: center;
+  font-size: 0;
+  padding: 90px 0;
+}
+
+.col-33{
+  display: inline-block;
+  margin: 65px 10px 20px 0;
+}
+
+.col-33 input{
+  background-color: #f5f7f9;
+  font-family: 'Open Sans', sans-serif;
+  width: 300px;
+}
+
+.col-100{
+  margin-bottom: 20px;
+}
+.col-100 textarea {
+  background-color: #f5f7f9;
+  display: inline;
+  height: 300px;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 3px;
+  border: 0;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/****************************************
+Footer
+****************************************/
+
+.footer{
+  font-size: 0;
+  background-color: #3a424c;
+  padding: 65px 0;
+}
+
+.col-50{
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.col-50-right{
+  text-align: right;
+}
+
+.footer-text{
+  width: 100%;
+  max-width: 400px;
+}
+
+.footer-text p{
+  display: inline-block;
+  padding: 10px 10px 0 0;
+  font-size: 12px;
+}
+
+.footer .logo{
+  color: #b0b0b0;
+}
+
+/*
+Probleme:
+1. De ce la .team-desc "michael" nu se aliniaza cu poza?
+2. Cum generez un border rotund cu gradient?
+3. Shape-urile din Service pot fi generate din CSS?
+4. Cand adaug background gradient pe portfolio-placeholder a::after nu se mai aplica background-color: rgba(0,0,0,0.6);
+5. Alta modalitate de a modifica imaginile din portfolio-buttons on hover nu am gasit. Pot sa aplic o culoare gradient pe filter?
+6. Cum aranjez cele 3 input-uri din contact egale intre ele, primul incepand de la marginea din stanga si ultimul la marginea din dreapta?
 */

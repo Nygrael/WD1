@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, unitial-scale=1">
     <title>Buje</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -254,7 +254,7 @@
 								<h2 class="gradient-dark">Basic</h2>
 								<p>LOREM IPSUM</p>
 							</div>
-							<div class="price-tier-name-50">
+							<div class="price-tier-name-50 price-tier-name-right">
                 <p id="number" class="gradient-dark">10</p>
                 <p id="simbol" class="gradient-dark">$</p>
 							</div>
@@ -278,7 +278,7 @@
 								<h2 class="gradient-dark">Bronze</h2>
 								<p>LOREM IPSUM</p>
 							</div>
-							<div class="price-tier-name-50">
+							<div class="price-tier-name-50 price-tier-name-right">
 								<p id="number" class="gradient-dark">10</p>
                 <p id="simbol" class="gradient-dark">$</p>
 							</div>
@@ -302,7 +302,7 @@
 								<h2 class="gradient-dark">Gold</h2>
 								<p>LOREM IPSUM</p>
 							</div>
-							<div class="price-tier-name-50">
+							<div class="price-tier-name-50 price-tier-name-right">
                 <p id="number" class="gradient-dark">10</p>
                 <p id="simbol" class="gradient-dark">$</p>
 							</div>
@@ -325,38 +325,34 @@
 	<div class="post">
 		<div class="wrap">
 			<p>Spend some time working on establishing a look and feel for our case studies, today!</p>
-			<br>
-			<p>@buje -</p><p>4 Hours ago</p>
+			<div class="post-name">
+			  <p id="post_p1">@buje - </p><p id="post_p2">4 Hours ago</p>
+			</div>
 			<div class="post-buttons">
-				<a href="#" class="main-button">
-					<i class="fa fa-google-plus" aria-hidden="true"></i>
-				</a>
+        <a href="#" class="three-buttons">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
 			</div>
 		</div>
 	</div>
 
 	<div class="contact">
 		<div class="wrap">
-			<h3>Contact</h3>
-			<form action ="self" method="post">
-			<div class="col-33">
-			  <label>Name:</label>
-			  <input type="text" name="name">
-			</div>
-			<div class="col-33">
-			  <label>Email:</label>
-			  <input type="email" name="email">
-			</div>
-			<div class="col-33">
-			  <label>Website:</label>
-			  <input type="text" name="site">
-			</div>
-			<div class="col-100">
-				<label for ="">Message:</label>
-				<textarea name="message"></textarea>
-				<br>
-				<button type="submit" class="button button-big" name="send" value="send">Submit</button>
-			</div>
+			<h2>Contact</h2>
+			<form class="form" action ="self" method="post">
+  			<div class="col-33">
+  			  <input type="text" name="name" placeholder="ENTER YOUR NAME">
+  			</div>
+  			<div class="col-33">
+  			  <input type="email" name="email" placeholder="ENTER YOUR EMAIL">
+  			</div>
+  			<div class="col-33">
+  			  <input type="text" name="site" placeholder="ENTER YOUR WEBSITE">
+  			</div>
+  			<div class="col-100">
+  				<textarea name="message" placeholder="MESSAGE..."></textarea>
+        </div>
+  				<button type="submit" class="button button-big" name="send" value="send">Submit</button>
 		  </form>
 		</div>
 	</div>
@@ -365,11 +361,13 @@
 		<div class="wrap">
 			<div class="col-50">
 				<a href="#" class="logo">BUJE</a>
-				<p>Buje.com</p>
-				<p>2014 Powered By</p>
-				<p>Wordpress</p>
+        <div class="footer-text">
+          <p class="gradient-dark">Buje.com</p>
+  				<p>2014 Powered By</p>
+  				<p class="gradient-dark">Wordpress</p>
+        </div>
 			</div>
-			<div class="col-50">
+			<div class="col-50 col-50-right">
 				<div class="footer-buttons">
 					<a href="#" class="three-buttons">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
