@@ -1,0 +1,96 @@
+/************************
+*******HTML&CSS**********
+************************/
+
+Table color by id: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_id1
+http://stackoverflow.com/questions/8645939/insert-line-break-after-every-two-rows-of-database
+
+
+/************************
+**********PHP************
+************************/
+
+
+// Strip HTML Tags
+$clear = strip_tags($des);
+// Clean up things like &amp;
+$clear = html_entity_decode($clear);
+// Strip out any url-encoded stuff
+$clear = urldecode($clear);
+// Replace non-AlNum characters with space
+$clear = preg_replace('/[^A-Za-z0-9]/', ' ', $clear);
+// Replace Multiple spaces with single space
+$clear = preg_replace('/ +/', ' ', $clear);
+// Trim the string of leading/trailing space
+$clear = trim($clear);
+
+======
+Books:
+======
+Mastering Object Oriented PHP - Brandon Savage
+The essentials of Object Oriented PHP - Joseph Benharosh
+
+====
+OOP:
+====
+http://www.web-and-development.com/php-object-oriented-programming-for-beginners/
+https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762
+http://phpenthusiast.com/object-oriented-php-tutorials
+
+===
+MVC
+===
+http://requiremind.com/a-most-simple-php-mvc-beginners-tutorial/
+https://github.com/pH-7/PHP-MVC-Blog-System
+
+======
+DATES:
+======
+
+http://php.net/manual/en/function.date.php
+http://php.net/manual/en/dateinterval.format.php
+http://stackoverflow.com/questions/29765180/php-increment-dates-in-loop
+http://php.net/manual/ro/class.dateperiod.php
+
+
+/************************
+******HTML&CSS&JS********
+************************/
+
+
+https://formden.com/form-builder/
+https://www.tutorialspoint.com/bootstrap/bootstrap_forms.htm
+http://caniuse.com/
+http://fontawesome.io/icons/
+https://codecanyon.net/item/layerslider-responsive-wordpress-slider-plugin/1362246
+
+http://bootsnipp.com/snippets/featured/no-more-tables-respsonsive-table
+https://getbootstrap.com/examples/grid/
+http://getbootstrap.com/css/
+
+Image Filters:
+https://codepen.io/stilllife00/pen/avXpgJ
+https://codepen.io/nxworld/pen/ZYNOBZ
+
+Youtube channels:
+
+Devtips: https://www.youtube.com/user/DevTipsForDesigners
+Coding Tech: https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ
+Design Course: https://www.youtube.com/user/DesignCourse/
+LearnCode.academy: https://www.youtube.com/channel/UCVTlvUkGslCV_h-nSAId8Sw
+LevelUp Tuts: https://www.youtube.com/channel/UCyU5wkjgQYGRB0hIHMwm2Sg
+Tuts+ Web Design: https://www.youtube.com/channel/UCTP1DN8Us94z0ciuCx71scg
+
+
+=======
+Scripts
+=======
+https://codecanyon.net/item/layerslider-responsive-wordpress-slider-plugin/1362246
+
+
+/************************
+********Tutorials********
+************************/
+
+Learn PHP Model View Controller Pattern (PHP MVC) - Last updated 2/2017
+https://www.udemy.com/learn-php-model-view-controller-pattern-php-mvc/
